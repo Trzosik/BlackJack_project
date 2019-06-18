@@ -20,4 +20,16 @@ class Hand:
     def __str__(self):
         if self.cards:
             rep = ''
-            for 
+            for card in self.cards:
+                rep += str(card) + ''
+        else:
+            rep = "<pusta>"
+        return rep
+
+    def clear(self):
+        self.cards = []
+
+    def add(self, card):
+        self.cards.append(card)
+
+
